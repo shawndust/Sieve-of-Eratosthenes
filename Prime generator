@@ -1,0 +1,32 @@
+/***************************************************************
+sieve method
+Use: Inserts into a set all the prime numbers within a range
+defined by the user.
+
+Parameters: 1. s: a const set of int which will hold the prime 
+ 				numbers.
+            2. lower: a user-defined const int holding the first
+				number in the set and the beginning of the range.
+			3. upper: a user-defined const int holding the last
+				number in the set and the end of the range.
+            
+Returns: Nothing.
+***************************************************************/
+void sieve( set<int>& s, const int lower, const int upper) {
+	int sum = 0;
+	// Nested for loops begin at the lower bound and continue 
+	// to the upper bound, incrementing at each step and checking
+	// for primality.
+	for(int i = lower; i < upper + 1; i++){
+		sum = 0;
+		
+		for(int j = 2; j < i; j++){
+			if(i%j == 0)	// If the number evenly divides by a 
+				sum++;		// number greater than one, it is
+		}					// not prime.
+		
+		if (sum == 0)		// If the number is prime, insert it.	
+			s.insert (i);
+	}
+	
+}
