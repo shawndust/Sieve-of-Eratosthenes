@@ -7,7 +7,7 @@ Parameters: 1. s: a const set of int which will hold the prime
  				numbers.
             2. lower: a user-defined const int holding the first
 				number in the set and the beginning of the range.
-			3. upper: a user-defined const int holding the last
+	    3. upper: a user-defined const int holding the last
 				number in the set and the end of the range.
             
 Returns: Nothing.
